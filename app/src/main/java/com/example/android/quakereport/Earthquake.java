@@ -2,28 +2,35 @@ package com.example.android.quakereport;
 
 public class Earthquake {
 
-    private String mMag;
+    private Double mMag;
 
-    private String mCity;
+    private String mLocation;
 
-    private String mDate;
+    private long mDateInMilliseconds;
 
-    public Earthquake(String mag, String city, String date) {
+    private String mUrl;
+
+    public Earthquake(Double mag, String location, long dateInMilliseconds, String url) {
 
         mMag = mag;
-        mCity = city;
-        mDate = date;
+        mLocation = location;
+        mDateInMilliseconds = dateInMilliseconds;
+        mUrl = url;
     }
 
-    public String getmMag() {
+    public Double getmMag() {
         return mMag;
     }
 
-    public String getmCity() {
-        return mCity;
+    public String getmLocation() {
+        return mLocation;
     }
 
-    public String getmDate() {
-        return mDate;
+    public long getmDateInMilliseconds() {
+        return mDateInMilliseconds;
+    }
+
+    public String getmUrl() {
+        return mUrl;
     }
 }
